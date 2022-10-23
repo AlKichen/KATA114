@@ -1,13 +1,23 @@
 package jm.task.core.jdbc;
 
-import jm.task.core.jdbc.util.Util;
+import jm.task.core.jdbc.service.UserServiceImpl;
+
 
 public class Main {
     public static void main(String[] args) {
         // реализуйте алгоритм здесь
-        //"jdbc:mysql://localhost:3306/mydbtest"
-        //проверка
-        Util util = new Util();
-        util.getConnection();
+        UserServiceImpl us = new UserServiceImpl();
+        us.createUsersTable();
+        us.saveUser("имя", "фамилия", (byte) 26);
+        us.saveUser("имя", "фамилия", (byte) 26);
+        us.saveUser("имя", "фамилия", (byte) 26);
+        us.saveUser("имя", "фамилия", (byte) 26);
+        System.out.println(us.getAllUsers());
+        us.removeUserById(3);
+        us.cleanUsersTable();
+        System.out.println(us.getAllUsers());
+        us.dropUsersTable();
+
+
     }
 }
