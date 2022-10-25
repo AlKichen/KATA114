@@ -15,10 +15,10 @@ public class Main {
         us.saveUser("имя3", "3фамилия", (byte) 55);
         us.saveUser("имя4", "4фамилия", (byte) 15);
         System.out.println(us.getAllUsers());
-        us.removeUserById(3);
-        /*us.cleanUsersTable();
+        us.removeUserById(4);
+        us.cleanUsersTable();
         System.out.println(us.getAllUsers());
-        us.dropUsersTable();*/
+        us.dropUsersTable();
 
 
     }
